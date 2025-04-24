@@ -2,17 +2,22 @@ import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import { HomeComponentComponent } from './home-component/home-component.component';
 import { CommonModule } from '@angular/common';
+import { RouterModule } from '@angular/router';
+
 
 @Component({
   selector: 'app-root',
-  imports: [CommonModule, HomeComponentComponent],
+  imports: [CommonModule, HomeComponentComponent, RouterModule],
   template: `
     <main>
-      <header class="brand-name">
-        <h1>Learn Angular</h1>
-      </header>
+      <a [routerLink]="['/']">
+        <header class="brand-name">
+          <h1>Learn Angular</h1>
+        </header>
+      </a>
+      
       <section class="content">
-        <app-home-component></app-home-component>
+        <router-outlet></router-outlet>
       </section>
     </main>
   `,
