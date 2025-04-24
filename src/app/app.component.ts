@@ -7,7 +7,7 @@ import { RouterModule } from '@angular/router';
 
 @Component({
   selector: 'app-root',
-  imports: [CommonModule, HomeComponentComponent, RouterModule],
+  imports: [CommonModule, RouterModule],
   template: `
     <main>
       <a [routerLink]="['/']">

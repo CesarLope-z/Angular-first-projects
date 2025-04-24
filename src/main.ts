@@ -7,7 +7,6 @@ import routeConfig from './app/app.routes';
 bootstrapApplication(AppComponent,
   {
     providers: [
-      provideProtractorTestingSupport(),
       provideRouter(routeConfig)
     ]
   }
