@@ -23,14 +23,15 @@ export class HomeComponentComponent {
   readonly baseUrl = 'https://angular.io/assets/images/tutorials/faa';
 
   housingLocationList: HousingLocation[] = [];
-  houstingService: HousingService = inject(HousingService);
+  housingService: HousingService = inject(HousingService);
 
   filteredLocationList: HousingLocation[] = [];
 
   constructor() {
-    this.housingLocationList = this.houstingService.getAllHousingLocations();
-    this.filteredLocationList = this.housingLocationList;
-
+    this.housingService.getAllHousingLocations().then((housingLocationList: HousingLocation[]) => {
+      this.housingLocationList = housingLocationList;
+      this.filteredLocationList = housingLocationList;
+    });
   }
 
   filterResults(text: string) {
