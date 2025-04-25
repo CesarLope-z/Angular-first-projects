@@ -1,9 +1,9 @@
 import { Injectable } from '@angular/core';
-import { HousingLocation } from './housinglotacion';
+import { HousingLocation } from './housinglocation';
 @Injectable({
   providedIn: 'root'
 })
-export class HoustingService {
+export class HousingService {
   readonly baseUrl = 'https://angular.io/assets/images/tutorials/faa';
   housingLocationList: HousingLocation[] = [
       {

@@ -1,6 +1,6 @@
 import { CommonModule } from '@angular/common';
 import { Component, Input } from '@angular/core';
-import { HousingLocation } from '../housinglotacion';
+import { HousingLocation } from '../housinglocation';
 import { RouterModule } from '@angular/router';
 
 @Component({
